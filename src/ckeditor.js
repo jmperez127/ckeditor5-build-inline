@@ -27,7 +27,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
-import Titles from './plugins/headers/titles';
+import Titles from './plugins/headings/titles';
+import Header from './plugins/sections/header/header';                                 // ADDED
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -54,13 +55,15 @@ InlineEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Titles
+	Titles,
+	Header
 ];
 
 // Editor configuration.
 InlineEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			'Titles',
 			'heading',
 			'|',
 			'bold',
@@ -74,7 +77,6 @@ InlineEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo',
-			'Titles'
 		]
 	},
 	image: {
