@@ -27,10 +27,14 @@ export default class TitlesEditing extends Plugin {
 
 		editor.conversion.attributeToElement({
 			model: {
-        key: TITLES,
-        values: [ 'Title', 'Subtitle'  ],
-        name: '$text'
-    	},
+				key: TITLES,
+				values: [
+					'Title', 'Subtitle', 'HeaderTitle',
+					'HeaderSubtitle', 'DescriptionParagraph',
+					'BrokerName', 'BrokerEmail'
+				],
+				name: '$text'
+			},
 			view: {
 				Title: {
 					name: 'h1',
@@ -39,6 +43,26 @@ export default class TitlesEditing extends Plugin {
 				Subtitle: {
 					name: 'h1',
 					classes: 'section_first_subtitle'
+				},
+				HeaderTitle: {
+					name: 'h1',
+					classes: 'title'
+				},
+				HeaderSubtitle: {
+					name: 'h1',
+					classes: 'subtitle'
+				},
+				DescriptionParagraph: {
+					name: 'p',
+					classes: 'description'
+				},
+				BrokerName: {
+					name: 'p',
+					classes: 'broker_name'
+				},
+				BrokerEmail: {
+					name: 'p',
+					classes: 'broker_email'
 				}
 			},
 			// upcastAlso: [

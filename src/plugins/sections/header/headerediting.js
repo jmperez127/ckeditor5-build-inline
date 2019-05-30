@@ -10,6 +10,24 @@ export default class HeaderEditing extends Plugin {
 	_defineSchema() {
 		const schema = this.editor.model.schema;
 
+
+		schema.register('title', {
+			// Behaves like a self-contained object (e.g. an image).
+			isObject: true,
+
+			// Allow in places where other blocks are allowed (e.g. directly in the root).
+			allowWhere: '$block'
+		});
+
+		schema.register('subtitle', {
+			// Behaves like a self-contained object (e.g. an image).
+			isObject: true,
+
+			// Allow in places where other blocks are allowed (e.g. directly in the root).
+			allowWhere: '$block'
+		});
+
+
 		schema.register('header', {
 			// Behaves like a self-contained object (e.g. an image).
 			isObject: true,
@@ -93,6 +111,22 @@ export default class HeaderEditing extends Plugin {
             view: {
 				name: 'div',
                 classes: 'title-column'
+            }
+		} );
+
+
+		conversion.elementToElement( {
+            model: 'title',
+            view: {
+				name: 'h2',
+                classes: 'title'
+            }
+		} );
+		conversion.elementToElement( {
+            model: 'subtitle',
+            view: {
+				name: 'h2',
+                classes: 'subtitle'
             }
 		} );
 

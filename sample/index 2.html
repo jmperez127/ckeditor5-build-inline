@@ -30,14 +30,14 @@
 </head>
 
 <body>
-
+	<!--
 	<div id="editor">
 		<section class="hero w-row">
 			<div class="title-column w-col w-col-4">
 				<h1>test</h1>
 			</div>
 			</section>
-	</div>
+	</div> -->
 
 	<!-- <div id="editor">
 			<section class="hero w-row">
@@ -56,46 +56,60 @@
 		</div> -->
 
 
-	<script src="../build/ckeditor.js"></script>
-	<script src="./ckeditor5-inspector/build/inspector.js"></script>
-	<script>
-		InlineEditor.create(document.querySelector('#editor'))
-			.then(editor => {
-				CKEditorInspector.attach(editor);
-				window.editor = editor;
-			})
-			.catch(err => {
-				console.error(err.stack);
-			});
-	</script>
 
 
 	<div>
-		<!-- <div id="header" class="hero w-row">
-    <div class="title-column w-col w-col-4">
-      <div data-w-id="facc241e-7c55-957f-9a57-19a41afd0b30" style="-webkit-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0.03" class="showcase_info">
-        <h1 class="subtitle">March 2017</h1>
-        <h1 class="title">BTS - Lease Proposal </h1>
-      </div>
-    </div>
-    <div data-w-id="774acf5a-1e91-2b3a-64c6-da1eb1365d3f" style="opacity:0;-webkit-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="main_image w-col w-col-8"><a href="#" class="tour_property w-button">Tour this property</a></div>
-  </div>
-  <div class="container w-container">
-    <div id="letter" class="summary_section w-row">
-      <div class="description w-col w-col-7">
-        <h1 class="letter_title">Presentation Letter</h1>
-        <p id="editor" class="description">Thank you for the opportunity to be part of your continued success in Mexico. <br><br>It is our pleasure to present this proposal for a BTSL building at the State of Nuevo Leon, Mexico for your consideration. <br><br>We take pride in what we do, and hope that this detailed proposal for the 300,000 SF facility will be of benefit to your evaluation process.<br><br>Please do not hesitate to contact me should you have any questions and additional requests.<br><br>Many thanks,</p>
-      </div>
-      <div class="brokers_section w-clearfix w-col w-col-5">
-        <div class="broker_info w-row">
-          <div class="w-col w-col-4"><img src="images/kimson-doan-341946-unsplash.jpg" srcset="images/kimson-doan-341946-unsplash-p-500.jpeg 500w, images/kimson-doan-341946-unsplash-p-800.jpeg 800w, images/kimson-doan-341946-unsplash-p-1080.jpeg 1080w, images/kimson-doan-341946-unsplash-p-1600.jpeg 1600w, images/kimson-doan-341946-unsplash.jpg 1987w" sizes="(max-width: 767px) 88px, (max-width: 991px) 72.90625px, 88px" alt="" class="image"></div>
-          <div class="column w-col w-col-8">
-            <p class="broker_name">Elizabeth Zamora</p>
-            <p class="broker_email">BUSINESS DEVELOPMENT DIRECTOR</p>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div id="header" class="hero w-row">
+			<div class="title-column w-col w-col-4">
+				<div data-w-id="facc241e-7c55-957f-9a57-19a41afd0b30"
+					style="-webkit-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0.03"
+					class="showcase_info">
+					<div id="title">
+						<h1 class="subtitle">March 2017</h1>
+						<h1 class="title">BTS - Lease Proposal </h1>
+					</div>
+				</div>
+			</div>
+			<div data-w-id="774acf5a-1e91-2b3a-64c6-da1eb1365d3f"
+				style="opacity:0;-webkit-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+				class="main_image w-col w-col-8"><a href="#" class="tour_property w-button">Tour this property</a></div>
+		</div>
+		<div class="container w-container" id="main-container">
+			<div id="letter" class="summary_section w-row ckeditor">
+				<h1 class="letter_title">Presentation Letter</h1>
+
+				<table>
+					<tr>
+						<td>
+							<p class="description">Thank you for the opportunity to be part of your continued success in
+								Mexico. <br>It is our pleasure to present this proposal for a BTSL building at the State
+								of Nuevo Leon, Mexico for your consideration.<br>We take pride in what we do, and hope
+								that this detailed proposal for the 300,000 SF facility will be of benefit to your
+								evaluation process.<br>Please do not hesitate to contact me should you have any
+								questions and additional requests.<br>Many thanks,</p>
+						</td>
+						<td><img src="images/kimson-doan-341946-unsplash.jpg"
+								srcset="images/kimson-doan-341946-unsplash-p-500.jpeg 500w, images/kimson-doan-341946-unsplash-p-800.jpeg 800w, images/kimson-doan-341946-unsplash-p-1080.jpeg 1080w, images/kimson-doan-341946-unsplash-p-1600.jpeg 1600w, images/kimson-doan-341946-unsplash.jpg 1987w"
+								sizes="(max-width: 767px) 88px, (max-width: 991px) 72.90625px, 88px" alt=""
+								class="image">
+							<p class="broker_name">Elizabeth Zamora</p>
+							<p class="broker_email">BUSINESS DEVELOPMENT DIRECTOR</p>
+						</td>
+					</tr>
+				</table>
+
+
+			</div>
+
+			<!--
+    <div class="section summary_section w-row ckeditor">
+			<h1 class="letter_title">New Section</h1>
+
+			<p class="description"></p>
+						<td><p class="description">Thank you for the opportunity to be part of your continued success in Mexico. <br>It is our pleasure to present this proposal for a BTSL building at the State of Nuevo Leon, Mexico for your consideration.<br>We take pride in what we do, and hope that this detailed proposal for the 300,000 SF facility will be of benefit to your evaluation process.<br>Please do not hesitate to contact me should you have any questions and additional requests.<br>Many thanks,</p></td>
+
+	</div>
+
     <div id="gallery" class="photo_gallery">
       <h1 class="section_title">Tour this property</h1>
       <div class="photo_row w-row">
@@ -1217,82 +1231,86 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div data-w-id="ece23cb7-66d9-4c68-8d0a-f2a94a0163e4" style="-webkit-transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1" class="bookmark">
-    <a href="#header" class="link-block w-inline-block">
-      <div class="anchor_link">Header</div>
-    </a>
-    <a href="#letter" class="link-block w-inline-block">
-      <div class="anchor_link">Presentation Letter</div>
-    </a>
-    <a href="#gallery" class="link-block w-inline-block">
-      <div class="anchor_link">Photo Gallery</div>
-    </a>
-    <a href="#location" class="link-block w-inline-block">
-      <div class="anchor_link">Project Location</div>
-    </a>
-    <a href="#drawing" class="link-block w-inline-block">
-      <div class="anchor_link">Drawings</div>
-    </a>
-    <a href="#renders" class="link-block w-inline-block">
-      <div class="anchor_link">Renders</div>
-    </a>
-    <a href="#interactive" class="link-block w-inline-block">
-      <div class="anchor_link">Interactive Render</div>
-    </a>
-    <a href="#economic_proposal" class="link-block w-inline-block">
-      <div class="anchor_link">Economic Proposal</div>
-    </a>
-    <a href="#economic_proposal" class="link-block w-inline-block">
-      <div class="anchor_sublink">Scope of Work</div>
-    </a>
-    <a href="#schedule_areas" class="link-block w-inline-block">
-      <div class="anchor_sublink">Schedule of Areas</div>
-    </a>
-    <a href="#project_deployment" class="link-block w-inline-block">
-      <div class="anchor_sublink">Deployment</div>
-    </a>
-    <a href="#general_conditions" class="link-block w-inline-block">
-      <div class="anchor_sublink">General Conditions</div>
-    </a>
-    <a href="#breakdown_1" class="link-block w-inline-block">
-      <div class="anchor_sublink">Breakdown</div>
-    </a>
-    <a href="#triple_nnn" class="link-block w-inline-block">
-      <div class="anchor_sublink">Triple Net</div>
-    </a>
-    <a href="#utilities" class="link-block w-inline-block">
-      <div class="anchor_link">Utilities</div>
-    </a>
-    <a href="#sign" class="link-block w-inline-block">
-      <div class="anchor_link">Sign</div>
-    </a>
-  </div>
-  <div data-w-id="6161f008-7db9-0f2f-4014-be953fe97381" style="-webkit-transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="bookmark_lines">
-    <div class="line_long"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-    <div class="line_short"></div>
-  </div> -->
+    </div> -->
+		</div>
+		<div id="bookmark" data-w-id="ece23cb7-66d9-4c68-8d0a-f2a94a0163e4"
+			style="-webkit-transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1"
+			class="bookmark">
+			<a href="#header" class="link-block w-inline-block">
+				<div class="anchor_link">Header</div>
+			</a>
+			<a href="#letter" class="link-block w-inline-block">
+				<div class="anchor_link">Presentation Letter</div>
+			</a>
+			<a href="#gallery" class="link-block w-inline-block">
+				<div class="anchor_link">Photo Gallery</div>
+			</a>
+			<a href="#location" class="link-block w-inline-block">
+				<div class="anchor_link">Project Location</div>
+			</a>
+			<a href="#drawing" class="link-block w-inline-block">
+				<div class="anchor_link">Drawings</div>
+			</a>
+			<a href="#renders" class="link-block w-inline-block">
+				<div class="anchor_link">Renders</div>
+			</a>
+			<a href="#interactive" class="link-block w-inline-block">
+				<div class="anchor_link">Interactive Render</div>
+			</a>
+			<a href="#economic_proposal" class="link-block w-inline-block">
+				<div class="anchor_link">Economic Proposal</div>
+			</a>
+			<a href="#economic_proposal" class="link-block w-inline-block">
+				<div class="anchor_sublink">Scope of Work</div>
+			</a>
+			<a href="#schedule_areas" class="link-block w-inline-block">
+				<div class="anchor_sublink">Schedule of Areas</div>
+			</a>
+			<a href="#project_deployment" class="link-block w-inline-block">
+				<div class="anchor_sublink">Deployment</div>
+			</a>
+			<a href="#general_conditions" class="link-block w-inline-block">
+				<div class="anchor_sublink">General Conditions</div>
+			</a>
+			<a href="#breakdown_1" class="link-block w-inline-block">
+				<div class="anchor_sublink">Breakdown</div>
+			</a>
+			<a href="#triple_nnn" class="link-block w-inline-block">
+				<div class="anchor_sublink">Triple Net</div>
+			</a>
+			<a href="#utilities" class="link-block w-inline-block">
+				<div class="anchor_link">Utilities</div>
+			</a>
+			<a href="#sign" class="link-block w-inline-block">
+				<div class="anchor_link">Sign</div>
+			</a>
+		</div>
+		<div data-w-id="6161f008-7db9-0f2f-4014-be953fe97381"
+			style="-webkit-transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+			class="bookmark_lines">
+			<div class="line_long"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+			<div class="line_short"></div>
+		</div>
 
 	</div>
 	<script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript"
@@ -1310,6 +1328,90 @@
 			theme: 'bubble'   // Specify theme in configuration
 		});
 	</script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+	<script>
+// $("#bookmark").html("");
+	</script>
+	<script src="../build/ckeditor.js"></script>
+	<script src="./ckeditor5-inspector/build/inspector.js"></script>
+	<script>
+	// InlineEditor.create(document.querySelector('#editor'))
+	// 	.then(editor => {
+	// 		CKEditorInspector.attach(editor);
+	// 		window.editor = editor;
+	// 	})
+	// 	.catch(err => {
+	// 		console.error(err.stack);
+	// 	});
+	</script>
+
+
+	<div style="position:fixed; bottom:0; width: 100%; height:100px; background-color: grey; text-align: center;">
+		<button class="left:50%;" id="add-section">Add section</button>
+	</div>
+
+	<div id="new-section" style="display:none;">
+		<div class="section summary_section w-row ckeditor">
+			<h1 class="letter_title">New Section</h1>
+			<p class="description">Thank you for the opportunity to be part of your continued success in Mexico.
+				<br>It is our pleasure to present this proposal for a BTSL building at the State of Nuevo Leon,
+				Mexico for your consideration.<br>We take pride in what we do, and hope that this detailed proposal
+				for the 300,000 SF facility will be of benefit to your evaluation process.<br>Please do not hesitate
+				to contact me should you have any questions and additional requests.<br>Many thanks,</p>
+
+		</div>
+	</div>
+
+	<script>
+
+		function createEditor(element) {
+			return InlineEditor
+				.create(document.querySelector(element))
+				.then(editor => {
+					editors[element] = editor;
+				})
+				.catch(err => console.error(err.stack));
+		}
+
+		var counter = 1;
+		$("#add-section").click(function () {
+			$("#main-container").append($('#new-section').html());
+			$("#main-container .section").last().attr("id", "section" + counter);
+			createEditor("#section" + counter)
+			counter++;
+		})
+
+
+		InlineEditor.create(document.querySelector('#title'))
+			.then(editor => {
+				window.editor = editor;
+			})
+			.catch(err => {
+				console.error(err.stack);
+			});
+
+		InlineEditor.create(document.querySelector('#letter_description'))
+			.then(editor => {
+				window.editor = editor;
+			})
+			.catch(err => {
+				console.error(err.stack);
+			});
+
+		InlineEditor.create(document.querySelector('.ckeditor'))
+			.then(editor => {
+				CKEditorInspector.attach(editor);
+				window.editor = editor;
+			})
+			.catch(err => {
+				console.error(err.stack);
+			});
+	</script>
+
+
 </body>
 
 </html>
