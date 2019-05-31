@@ -1063,3 +1063,20 @@ html.w-mod-js *[data-ix="left-30-opacity-0-scroll-0-50s"] {
 .section{
 	margin-top: 125px;
 }
+
+.hide-border{
+	border: none !important;
+	/* background: red; */
+}
+
+.hide-border:parent{
+	border: none !important;
+	/* background: red; */
+}
+
+.ck-content .table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	/* border: 1px double #b3b3b3; */
+	border: none !important;
+}
