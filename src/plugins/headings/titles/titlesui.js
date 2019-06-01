@@ -15,7 +15,6 @@ export default class TitlesUI extends Plugin {
 		const titlesNames = editor.config.get( 'titlesConfig.types' );
 
 		editor.ui.componentFactory.add( TITLES, locale => {
-
 			const dropdownView = createDropdown( locale );
 
 			// // Populate the list in the dropdown with items.

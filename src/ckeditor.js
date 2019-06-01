@@ -31,6 +31,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Titles from './plugins/headings/titles';
 import Header from './plugins/sections/header/header';
+import RemoveSection from './plugins/sections/remove/removesection';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -59,7 +60,8 @@ InlineEditor.builtinPlugins = [
 	TableToolbar,
 	Titles,
 	Header,
-	Alignment
+	Alignment,
+	RemoveSection
 ];
 
 // Editor configuration.
@@ -80,7 +82,8 @@ InlineEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo',
-			'alignment'
+			'alignment',
+			'removeSection'
 		]
 	},
 	image: {

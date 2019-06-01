@@ -10,7 +10,6 @@ export default class HeaderEditing extends Plugin {
 	_defineSchema() {
 		const schema = this.editor.model.schema;
 
-
 		schema.register('title', {
 			// Behaves like a self-contained object (e.g. an image).
 			isObject: true,

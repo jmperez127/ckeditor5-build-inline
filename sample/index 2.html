@@ -75,12 +75,12 @@
 				class="main_image w-col w-col-8"><a href="#" class="tour_property w-button">Tour this property</a></div>
 		</div>
 		<div class="container w-container" id="main-container">
-			<div id="letter" class="summary_section w-row ckeditor">
+			<div id="letter" class="summary_section w-row">
 				<h1 class="letter_title">Presentation Letter</h1>
 
 				<table class="show-border">
-					<tr border="0">
-						<td border="0">
+					<tr>
+						<td>
 							<p class="description">Thank you for the opportunity to be part of your continued success in
 								Mexico. <br>It is our pleasure to present this proposal for a BTSL building at the State
 								of Nuevo Leon, Mexico for your consideration.<br>We take pride in what we do, and hope
@@ -1337,16 +1337,6 @@
 	</script>
 	<script src="../build/ckeditor.js"></script>
 	<script src="./ckeditor5-inspector/build/inspector.js"></script>
-	<script>
-	// InlineEditor.create(document.querySelector('#editor'))
-	// 	.then(editor => {
-	// 		CKEditorInspector.attach(editor);
-	// 		window.editor = editor;
-	// 	})
-	// 	.catch(err => {
-	// 		console.error(err.stack);
-	// 	});
-	</script>
 
 
 	<div style="position:fixed; bottom:0; width: 100%; height:100px; background-color: grey; text-align: center;">
@@ -1367,11 +1357,24 @@
 
 	<script>
 
+		var editors = {}
 		function createEditor(element) {
 			return InlineEditor
 				.create(document.querySelector(element))
 				.then(editor => {
+
+					editor.config.define('removeSectionConfig', { url: 'http://'+window.location.hostname+'/deals/1/webpages/1/sections' });
+
 					editors[element] = editor;
+					CKEditorInspector.attach(editor);
+					editor.ui.focusTracker.on('change:isFocused', (evt, name, isFocused) => {
+
+						if (isFocused) {
+							console.log(editor);
+
+							// Do whatever you want with current editor data:
+						}
+					});
 				})
 				.catch(err => console.error(err.stack));
 		}
@@ -1384,31 +1387,9 @@
 			counter++;
 		})
 
+		createEditor("#title");
+		createEditor("#letter");
 
-		InlineEditor.create(document.querySelector('#title'))
-			.then(editor => {
-				window.editor = editor;
-			})
-			.catch(err => {
-				console.error(err.stack);
-			});
-
-		InlineEditor.create(document.querySelector('#letter_description'))
-			.then(editor => {
-				window.editor = editor;
-			})
-			.catch(err => {
-				console.error(err.stack);
-			});
-
-		InlineEditor.create(document.querySelector('.ckeditor'))
-			.then(editor => {
-				CKEditorInspector.attach(editor);
-				window.editor = editor;
-			})
-			.catch(err => {
-				console.error(err.stack);
-			});
 	</script>
 
 
