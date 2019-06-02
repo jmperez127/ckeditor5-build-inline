@@ -1080,3 +1080,66 @@ html.w-mod-js *[data-ix="left-30-opacity-0-scroll-0-50s"] {
 	/* border: 1px double #b3b3b3; */
 	border: none !important;
 }
+
+.footer-toolbar{
+	display: flex;
+ 	flex-direction: row;
+  	flex-wrap: nowrap;
+  	align-items: stretch;
+  	min-height: 40px;
+  	max-height: 40px;
+  	border-bottom: 1px solid var(--ck-inspector-color-border);
+  	width: 100%;
+  	user-select: none;
+  	align-items: center;
+	background-color:var(--ck-inspector-color-background);
+	z-index:1000; position:fixed;
+	bottom:0px;
+	text-align: center;
+}
+
+.footer-toolbar-minimized{
+    width: 3% !important;
+    float: right !important;
+    margin-right: auto !important;
+    margin-left: 96% !important;
+}
+
+.footer-toolbar-minimized .minimize{
+	margin: 0 30% !important;
+	transform: rotate(180deg) !important;
+}
+.footer-toolbar-minimized .item{
+	display: none !important;
+}
+
+.footer-toolbar .minimize{
+	margin: 0 97%;
+	color: black;
+	/* background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIgNS41bDUuMjkzIDUuMjkzYTEgMSAwIDAgMCAxLjQxNCAwTDE0IDUuNSIgc3Ryb2tlPSIjNzQ3NDc0IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg=='); */
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIgNS41bDUuMjkzIDUuMjkzYTEgMSAwIDAgMCAxLjQxNCAwTDE0IDUuNSIgc3Ryb2tlPSIjNzQ3NDc0IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==');
+	width: 1.7em;
+	height: 1.6em;
+	opacity: .7;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	display: block;
+	overflow: hidden;
+	text-indent: 100px;
+	align-self: center;
+	white-space: nowrap;
+	margin-right: 1em;
+	float:right;
+}
+
+.footer-toolbar .item{
+    width: 150px;
+    float: left;
+    left: 45%;
+    position: absolute;
+    background: #58a1d0;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid #b7b7b7;
+}
