@@ -18,6 +18,7 @@ import tableIcon from './theme/icons/table.svg';
 import tableColumnIcon from './theme/icons/table-column.svg';
 import tableRowIcon from './theme/icons/table-row.svg';
 import tableMergeCellIcon from './theme/icons/table-merge-cell.svg';
+import tableBorder from './theme/icons/table-border.svg';
 
 /**
  * The table UI plugin. It introduces:
@@ -165,7 +166,7 @@ export default class TableUI extends Plugin {
 				}
 			];
 
-			return this._prepareDropdown( t( 'Borders' ), tableMergeCellIcon, options, locale );
+			return this._prepareDropdown( t( 'Borders' ), tableBorder, options, locale );
 		} );
 
 		editor.ui.componentFactory.add( 'mergeTableCells', locale => {
