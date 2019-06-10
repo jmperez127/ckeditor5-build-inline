@@ -25,10 +25,10 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
-// import Table from '@ckeditor/ckeditor5-table/src/table';
-import Table from './plugins/enhanced_tables/table';
-import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave'
+import Table from './plugins/enhanced_tables/table';
 import Titles from './plugins/headings/titles';
 import Header from './plugins/sections/header/header';
 import RemoveSection from './plugins/sections/remove/removesection';
@@ -37,6 +37,7 @@ export default class InlineEditor extends InlineEditorBase {}
 
 // Plugins to include in the build.
 InlineEditor.builtinPlugins = [
+	Autosave,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -96,10 +97,10 @@ InlineEditor.defaultConfig = {
 	},
 	table: {
 		contentToolbar: [
+			'borders',
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells',
-			'borders'
+			'mergeTableCells'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
