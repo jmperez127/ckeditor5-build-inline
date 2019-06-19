@@ -91,6 +91,7 @@ export default class HeaderEditing extends Plugin {
 			// Allow content which is allowed in the root (e.g. paragraphs).
 			allowContentOf: '$root'
 		});
+
 	}
 
 
@@ -113,6 +114,13 @@ export default class HeaderEditing extends Plugin {
             }
 		} );
 
+		// conversion.elementToElement({
+		// 	model: 'a4_portrait',
+		// 	view: {
+		// 		name: 'div',
+		// 		classes: 'a4_portrait'
+		// 	}
+		// })
 
 		conversion.elementToElement( {
             model: 'title',
