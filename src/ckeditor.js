@@ -32,6 +32,7 @@ import Table from './plugins/enhanced_tables/table';
 import Titles from './plugins/headings/titles';
 import Header from './plugins/sections/header/header';
 import RemoveSection from './plugins/sections/remove/removesection';
+import Common from './plugins/sections/common/common';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -62,7 +63,8 @@ InlineEditor.builtinPlugins = [
 	Titles,
 	Header,
 	Alignment,
-	RemoveSection
+	RemoveSection,
+	Common
 ];
 
 // Editor configuration.
